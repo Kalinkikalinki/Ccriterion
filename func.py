@@ -69,7 +69,6 @@ def stop():
     flippedRGB = cv2.cvtColor(flipped, cv2.COLOR_BGR2RGB)
     # Распознаем
     results = handsDetector.process(flippedRGB)
-    # Рисуем распознанное, если распозналось
     if results.multi_hand_landmarks is not None:
         for hand_landmarks in results.multi_hand_landmarks:
             a = Vector(hand_landmarks.landmark[0].x, hand_landmarks.landmark[0].y,hand_landmarks.landmark[8].x,hand_landmarks.landmark[8].y)

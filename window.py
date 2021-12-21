@@ -5,6 +5,7 @@ from func import stop
 import cv2
 import mediapipe as mp
 import numpy as np
+import main
 root=Tk()
 root.geometry('200x100')
 frame = Frame(root)

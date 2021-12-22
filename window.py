@@ -48,16 +48,8 @@ root=Tk()
 root.geometry('400x400')
 frame = Frame(root)
 frame.pack(pady=20,padx=20)
-
-
-
 btn=Button(frame,text='Включить безопасный режим',command=Main)
 btn.pack()
 anim = MyLabel(root, 'tenor.gif')
 anim.pack()
-
-def stop_it():
-    anim.after_cancel(anim.cancel)
-
-Button(root, text='stop', command=stop_it).pack()
 root.mainloop()

@@ -1,10 +1,5 @@
 from tkinter import *
-from subprocess import call
 from main import Main
-from stop import stop
-import cv2
-import mediapipe as mp
-import numpy as np
 from PIL import Image, ImageTk
 class MyLabel(Label):
     def __init__(self, master, filename):
@@ -37,18 +32,25 @@ class MyLabel(Label):
 
         self.cancel = self.after(self.delay, self.play)
 
+
     def play(self):
         self.config(image=self.frames[self.idx])
         self.idx += 1
         if self.idx == len(self.frames):
             self.idx = 0
         self.cancel = self.after(self.delay, self.play)
+
+
 root=Tk()
 root.geometry('400x400')
+
 frame = Frame(root)
 frame.pack(pady=20,padx=20)
+
 btn=Button(frame,text='Включить безопасный режим',command=Main)
 btn.pack()
+
 anim = MyLabel(root, 'tenor.gif')
 anim.pack()
+
 root.mainloop()

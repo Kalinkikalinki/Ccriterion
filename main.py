@@ -8,7 +8,11 @@ if sys.platform == "win32":
 else:
     def Beep(hz,time):
         print("\a")
-
+        print("\a")
+        print("\a")
+        print("\a")
+        print("\a")
+        print("\a")
 from stop import stop
 import cv2
 import mediapipe as mp

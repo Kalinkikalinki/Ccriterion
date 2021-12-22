@@ -1,7 +1,6 @@
 from tkinter import *
 from subprocess import call
 from main import Main
-import winsound
 from stop import stop
 import cv2
 import mediapipe as mp
